@@ -6,10 +6,10 @@
     <insert id="insertCst" parameterType="njtech.entity.Customer">
         insert INTO customer (cid,cname,cpassword,cphone) VALUES(#{cid},#{cname},#{cpassword},#{cphone})
     </insert>
-    <delete>
+    <delete id="deleteCst" parameterType="njtech.entity.Customer">
         delete from customer where cid = #{cid}
     </delete>
-    <update>
+    <update id="updateCst" parameterType="njtech.entity.Customer">
         update customer
         <set>
             <if test="cname!=null">
@@ -24,7 +24,7 @@
             where cid = #{cid}
         </set>
     </update>
-    <select>
+    <select id="selectCst" parameterType="njtech.entity.Customer">
         select * from customer where cid = #{cid}
     </select>
 </mapper>
