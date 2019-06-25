@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njtech.dao.CstDao">
+    <insert id="insertCst" parameterType="njtech.entity.Customer">
+        insert INTO customer (cid,cname,cpassword,cphone) VALUES(#{cid},#{cname},#{cpassword},#{cphone})
+    </insert>
+    <delete>
+        delete from customer where cid = #{cid}
+    </delete>
+    <update>
+        update customer
+        <set>
+            <if test="cname!=null">
+                cname=#{cname},
+            </if>
+            <if test="cpassword!=ull">
+                cpassword=#{cpassword},
+            </if>
+            <if test="cphone!=null">
+                cphone=#{cphone},
+            </if>
+            where cid = #{cid}
+        </set>
+    </update>
+    <select>
+        select * from customer where cid = #{cid}
+    </select>
+</mapper>
