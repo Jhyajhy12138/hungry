@@ -1,4 +1,4 @@
-package entity;
+package edu.njtech.hungry.model;
 
 public class Recipients {
     private Integer gid;

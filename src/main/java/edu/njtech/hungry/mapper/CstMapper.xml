@@ -2,14 +2,14 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="njtech.dao.CstDao">
-    <insert id="insertCst" parameterType="njtech.entity.Customer">
+<mapper namespace="edu.njtech.hungry.dao.CstDao">
+    <insert id="insertCst" parameterType="edu.njtech.hungry.model.Customer">
         insert INTO customer (cid,cname,cpassword,cphone) VALUES(#{cid},#{cname},#{cpassword},#{cphone})
     </insert>
-    <delete id="deleteCst" parameterType="njtech.entity.Customer">
+    <delete id="deleteCst" parameterType="edu.njtech.hungry.model.Customer">
         delete from customer where cid = #{cid}
     </delete>
-    <update id="updateCst" parameterType="njtech.entity.Customer">
+    <update id="updateCst" parameterType="edu.njtech.hungry.model.Customer">
         update customer
         <set>
             <if test="cname!=null">
@@ -24,7 +24,7 @@
             where cid = #{cid}
         </set>
     </update>
-    <select id="selectCst" parameterType="njtech.entity.Customer">
+    <select id="selectCst" parameterType="edu.njtech.hungry.model.Customer">
         select * from customer where cid = #{cid}
     </select>
 </mapper>

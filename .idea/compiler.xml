@@ -10,5 +10,8 @@
         <module name="hungry_again" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ArchiveManagement" target="6" />
+    </bytecodeTargetLevel>
   </component>
 </project>

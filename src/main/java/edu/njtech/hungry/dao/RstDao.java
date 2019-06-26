@@ -1,6 +1,6 @@
-package dao;
+package edu.njtech.hungry.dao;
 
-import entity.Restaurant;
+import edu.njtech.hungry.model.Restaurant;
 
 public interface RstDao {
     public void insertRst(Restaurant restaurant);
