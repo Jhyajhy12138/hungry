@@ -32,8 +32,8 @@ CheckOrder
             String gname = (String) map.get(key);
             %>
 &emsp;
-<%=oid+"\t\t\t\t"%>&emsp;&emsp;
-<%=gname+"\t\t\t\t"%>&emsp;&emsp;
+<%=oid%>&emsp;&emsp;
+<%=gname%>&emsp;&emsp;
 <%=glocation%>&emsp;&emsp;
 <%=gphone%>&emsp;&emsp;
 <br>
