@@ -10,15 +10,6 @@ public class Horseman {
 
     public Horseman(){}
 
-    public Horseman(Integer hmid, String hmname, String hmpassword, String hmidcard, Integer hmstate, String hmphone) {
-        this.hmid = hmid;
-        this.hmname = hmname;
-        this.hmpassword = hmpassword;
-        this.hmidcard = hmidcard;
-        this.hmstate = hmstate;
-        this.hmphone = hmphone;
-    }
-
     public Horseman(Integer hmid, String hmname, String hmpassword, String hmidcard, Integer hmstate) {
         this.hmid = hmid;
         this.hmname = hmname;

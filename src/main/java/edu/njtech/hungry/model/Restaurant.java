@@ -10,15 +10,6 @@ public class Restaurant {
 
     public void Restaurant(){}
 
-    public Restaurant(Integer rid, String rname, String rpassword, String ridcard, String rnum, String rphone) {
-        this.rid = rid;
-        this.rname = rname;
-        this.rpassword = rpassword;
-        this.ridcard = ridcard;
-        this.rnum = rnum;
-        this.rphone = rphone;
-    }
-
     public Integer getRid() {
         return rid;
     }

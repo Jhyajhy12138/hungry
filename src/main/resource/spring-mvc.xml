@@ -20,6 +20,6 @@
     <!--能访问静态资源-->
     <mvc:default-servlet-handler/>
     <!--直接访问视图-->
-    <mvc:view-controller path="toAbout"/>
+
 
 </beans>

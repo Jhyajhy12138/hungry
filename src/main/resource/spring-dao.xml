@@ -41,7 +41,7 @@
         -->
         <property name="mapperLocations">
             <array>
-                <value>classpath:edu/njtech/hungry/mapper/*Mapper.xml</value>
+                <value>classpath:edu/njtech/hungry/mapper/*.xml</value>
 
             </array>
         </property>

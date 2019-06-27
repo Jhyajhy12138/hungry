@@ -3,6 +3,8 @@ package edu.njtech.hungry.controller;
 import javax.servlet.http.HttpSession;
 
 import edu.njtech.hungry.model.Horseman;
+import edu.njtech.hungry.model.Order;
+import edu.njtech.hungry.model.Recipients;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +15,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import edu.njtech.hungry.model.Horseman;
 import edu.njtech.hungry.service.HorsemanService;
+
+import java.util.*;
 
 @Controller
 @RequestMapping("/horseman")
@@ -56,7 +60,7 @@ public class HorsemanController {
     public String outLogin(HttpSession session){
         //通过session.invalidata()方法来注销当前的session
         session.invalidate();
-        return "login";
+        return "HorsemanLogin";
     }
 
     @RequestMapping("/regist")
@@ -75,4 +79,20 @@ public class HorsemanController {
     public String f1(){
         return "fail";
     }
+
+    @RequestMapping("/checkOrder")
+    public String checkOrder(HttpSession httpSession){
+        List<Map> list = horsemanServivce.findRecipientsByCid();
+        System.out.println(list+"for外");
+        for (Map<String,Object> map:list){
+            Iterator<String> iterator = map.keySet().iterator();
+            while (iterator.hasNext()){
+                String key = iterator.next();
+                System.out.println(map.get(key));
+            }
+        }
+        httpSession.setAttribute("list",list);
+        return "CheckOrder";
+    }
+
 }

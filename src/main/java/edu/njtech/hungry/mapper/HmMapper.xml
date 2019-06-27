@@ -7,9 +7,13 @@
 <!-- 查询用户和密码进行登录 -->
 <select id="findByUsername" resultType="Horseman" parameterType="String">
 
-        select * from user where hmname = #{hmname}
+        select * from t_horseman where hmname = #{hmname}
 
     </select>
+
+    <select id="findRecipientsByCid" resultType="java.util.Map">
+        select o.oid,r.gname,r.glocation,r.gphone from t_order o , t_recipients r where o.cid=r.cid  and o.ostate=0;    </select>
+
 
 <!--增加用户名和密码进行注册  -->
 <insert id="registerByUsernameAndPassword">

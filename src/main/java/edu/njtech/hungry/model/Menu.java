@@ -1,16 +1,19 @@
 package edu.njtech.hungry.model;
 
 public class Menu {
+    private Integer rid;
     private Integer fid;
     private String fname;
     private Double fprice;
 
     public Menu(){}
 
-    public Menu(Integer fid, String fname, Double fprice) {
-        this.fid = fid;
-        this.fname = fname;
-        this.fprice = fprice;
+    public Integer getRid() {
+        return rid;
+    }
+
+    public void setRid(Integer rid) {
+        this.rid = rid;
     }
 
     public Integer getFid() {

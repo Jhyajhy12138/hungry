@@ -10,13 +10,6 @@ public class Customer {
 
     }
 
-    public Customer(Integer cid, String cname, String cpassword, String cphone) {
-        this.cid = cid;
-        this.cname = cname;
-        this.cpassword = cpassword;
-        this.cphone = cphone;
-    }
-
     public Integer getCid() {
         return cid;
     }

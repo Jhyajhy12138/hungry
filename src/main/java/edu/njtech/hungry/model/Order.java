@@ -2,8 +2,35 @@ package edu.njtech.hungry.model;
 
 public class Order {
     private Integer oid;
+    private Integer cid;
+    private Integer rid;
+    private Integer fnum;
     private Integer ostate;
     private Double sumprice;
+
+    public Integer getCid() {
+        return cid;
+    }
+
+    public void setCid(Integer cid) {
+        this.cid = cid;
+    }
+
+    public Integer getRid() {
+        return rid;
+    }
+
+    public void setRid(Integer rid) {
+        this.rid = rid;
+    }
+
+    public Integer getFnum() {
+        return fnum;
+    }
+
+    public void setFnum(Integer fnum) {
+        this.fnum = fnum;
+    }
 
     public Order(){}
 
@@ -40,5 +67,12 @@ public class Order {
 
     public void setSumprice(Double sumprice) {
         this.sumprice = sumprice;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "oid=" + oid +
+                '}';
     }
 }

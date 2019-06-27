@@ -1,6 +1,7 @@
 package edu.njtech.hungry.model;
 
 public class Recipients {
+    private Integer cid;
     private Integer gid;
     private String gname;
     private String glocation;
@@ -8,11 +9,12 @@ public class Recipients {
 
     public void Recipients(){}
 
-    public Recipients(Integer gid, String gname, String glocation, String gphone) {
-        this.gid = gid;
-        this.gname = gname;
-        this.glocation = glocation;
-        this.gphone = gphone;
+    public Integer getCid() {
+        return cid;
+    }
+
+    public void setCid(Integer cid) {
+        this.cid = cid;
     }
 
     public Integer getGid() {
@@ -45,5 +47,14 @@ public class Recipients {
 
     public void setGphone(String gphone) {
         this.gphone = gphone;
+    }
+
+    @Override
+    public String toString() {
+        return "Recipients{" +
+                "gname='" + gname + '\'' +
+                ", glocation='" + glocation + '\'' +
+                ", gphone='" + gphone + '\'' +
+                '}';
     }
 }

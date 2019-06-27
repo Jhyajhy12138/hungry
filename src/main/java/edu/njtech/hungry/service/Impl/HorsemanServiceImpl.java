@@ -1,11 +1,16 @@
 package edu.njtech.hungry.service.Impl;
 
+import edu.njtech.hungry.model.Order;
+import edu.njtech.hungry.model.Recipients;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.njtech.hungry.dao.HmDao;
 import edu.njtech.hungry.model.Horseman;
 import edu.njtech.hungry.service.HorsemanService;
+
+import java.util.List;
+import java.util.Map;
 
 @Service
 public class HorsemanServiceImpl implements HorsemanService{
@@ -27,6 +32,12 @@ public class HorsemanServiceImpl implements HorsemanService{
         }
         return null;
     }
+
+    public List<Map> findRecipientsByCid(){
+        return hmdao.findRecipientsByCid();
+    }
+
+
 
     @Override
     public void Regist(Horseman horseman) {

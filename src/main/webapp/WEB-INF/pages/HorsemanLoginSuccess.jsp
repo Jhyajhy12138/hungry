@@ -22,7 +22,7 @@
 this is success page!
 
 <a href="${pageContext.request.contextPath}/horseman/anotherpage">点我跳到另一个页面</a>
-
+<a href="${pageContext.request.contextPath}/horseman/checkOrder">查看未接订单</a>
 <form action="${pageContext.request.contextPath}/horseman/login">
     <table>
         <tr>
@@ -30,5 +30,7 @@ this is success page!
         </tr>
     </table>
 </form>
+
+
 </body>
 </html>
