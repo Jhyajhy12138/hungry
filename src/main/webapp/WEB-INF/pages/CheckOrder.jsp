@@ -15,6 +15,8 @@
 <body>
 CheckOrder
 <br>
+订单编号     收货人     派送地址     收货人手机
+<br>
 <%
     List<Map> list = (List<Map>)session.getAttribute("list");
     for(Map<String,Object> map : list){
@@ -29,10 +31,12 @@ CheckOrder
             key = iterator.next();
             String gname = (String) map.get(key);
             %>
-<%=oid+"  "%>
-<%=glocation+"  "%>
-<%=gphone+"  "%>
-<%=gname+"  "%><br>
+&emsp;
+<%=oid+"\t\t\t\t"%>&emsp;&emsp;
+<%=gname+"\t\t\t\t"%>&emsp;&emsp;
+<%=glocation%>&emsp;&emsp;
+<%=gphone%>&emsp;&emsp;
+<br>
 <%
         }
     }
