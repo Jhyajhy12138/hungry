@@ -28,6 +28,12 @@ this is success page!
         <tr>
             <td><input type="submit" value="退出登录"></td>
         </tr>
+        <tr>
+            <td><input type="button" value="开始接单" onclick=""></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="查看订单" onclick=""></td>
+        </tr>
     </table>
 </form>
 

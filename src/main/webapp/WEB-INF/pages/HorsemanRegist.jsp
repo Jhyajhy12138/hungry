@@ -9,6 +9,20 @@
 <html>
 <head>
     <title>注册页面</title>
+    <script type="text/javascript">
+        function check1(){
+            var d=document.getElementById('t1').value;//首先通过文本框的id获取它的值然后进行判断
+            if(d.length==11){//如果输入的字符大于5就给个对话框
+                alert("请输入十一位电话号码");
+            }
+        }
+        function check2(){
+            var d=document.getElementById('t2').value;//首先通过文本框的id获取它的值然后进行判断
+            if(d.length==18){//如果输入的字符大于5就给个对话框
+                alert("请输入正确的身份证号");
+            }
+        }
+    </script>
 </head>
 <body>
 <h3>注册页面</h3>
@@ -30,18 +44,20 @@
         <tr height="35px">
             <td>身份证号</td>
             <td>
-                <input type="text" name="hmidcard" id="hmidcard">
+                <input id="t2" type="text" name="hmidcard" id="hmidcard" onkeypress="check2()">
             </td>
         </tr>
         <tr height="35px">
             <td>手机号</td>
             <td>
-                <input type="text" name="hmphone" id="hmphone">
+                <input id="t1" type="text" name="hmphone" id="hmphone" onkeypress="check1()">
             </td>
         </tr>
         <tr>
+
             <td colspan="2" align="center">
                 <input type="submit" id="regist" value="注册"/>
+                <input type="button"  value="返回" onclick="window.location.href='login'"/>
             </td>
         </tr>
     </table>

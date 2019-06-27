@@ -14,6 +14,6 @@
     <title>Insert title here</title>
 </head>
 <body>
-u are loser,this is a fail page!
+u r loser,this is a fail page!
 </body>
 </html>

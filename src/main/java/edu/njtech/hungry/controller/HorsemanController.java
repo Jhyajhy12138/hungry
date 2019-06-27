@@ -9,11 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import edu.njtech.hungry.model.Horseman;
 import edu.njtech.hungry.service.HorsemanService;
 
 import java.util.*;
@@ -45,7 +42,7 @@ public class HorsemanController {
             model.addAttribute("horseman",horseman);
             return "HorsemanLoginSuccess";
         }
-        return "fail";
+        return "HorsemanLoginFail";
     }
 
     //测试超链接跳转到另一个页面是否可以取到session值
@@ -54,11 +51,21 @@ public class HorsemanController {
 
         return "anotherpage";
     }
+    @RequestMapping("/startorder")
+    public String startorder(){
+
+        return "HorsemanStartOrder";
+    }
+    @RequestMapping("/sendorder")
+    public String sendorder(){
+
+        return "HorsemanSendOrder";
+    }
 
     //注销方法
     @RequestMapping("/outLogin")
     public String outLogin(HttpSession session){
-        //通过session.invalidata()方法来注销当前的session
+        //通过session.invalidate()方法来注销当前的session
         session.invalidate();
         return "HorsemanLogin";
     }
@@ -67,6 +74,17 @@ public class HorsemanController {
     public String regist(){
         return "HorsemanRegist";
     }
+
+    /**
+     * 跳转到添加用户界面
+     * @return
+     */
+    @RequestMapping("toAddUser")
+    public String toAddUser(){
+        return "addMenu";
+    }
+
+
 
     @RequestMapping("/doRegist")
     public String doRegist(Horseman hm, Model model){
@@ -77,7 +95,7 @@ public class HorsemanController {
 
     @RequestMapping("/test")
     public String f1(){
-        return "fail";
+        return "HorsemanLoginFail";
     }
 
     @RequestMapping("/checkOrder")

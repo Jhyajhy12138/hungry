@@ -12,6 +12,13 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ArchiveManagement" target="6" />
+      <module name="biyesheji" target="1.8" />
+      <module name="maven-archiver" target="1.5" />
+      <module name="UploadImg (1)" target="1.5" />
+      <module name="UploadImg (2)" target="1.5" />
+      <module name="UploadImg (2) (cn.test)" target="1.5" />
+      <module name="UploadImg (3)" target="1.5" />
+      <module name="UploadImg (3) (cn.test)" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
