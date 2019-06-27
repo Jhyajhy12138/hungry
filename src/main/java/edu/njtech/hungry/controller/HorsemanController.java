@@ -81,7 +81,7 @@ public class HorsemanController {
     }
 
     @RequestMapping("/checkOrder")
-    public String checkOrder(HttpSession httpSession){
+    public String checkOrder(HttpSession session){
         List<Map> list = horsemanServivce.findRecipientsByCid();
         System.out.println(list+"for外");
         for (Map<String,Object> map:list){
@@ -91,7 +91,7 @@ public class HorsemanController {
                 System.out.println(map.get(key));
             }
         }
-        httpSession.setAttribute("list",list);
+        session.setAttribute("list",list);
         return "CheckOrder";
     }
 
